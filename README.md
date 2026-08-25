@@ -254,7 +254,7 @@ flowchart TD
 ## 10. Solutions
 
 1. **Quoted Environment String Handling**:
-   - Wrapped the password value in double quotes in `.env` (`DB_PASSWORD="jpplantilla@23"`).
+   - Wrapped the database password value in double quotes in `.env` to safely handle special characters.
 2. **Binary Header-Based Fake Image Generation**:
    - Developed a standalone image generator in [`StudentRegistrationTest.php`](tests/Feature/StudentRegistrationTest.php) that injects valid, base64-decoded 1x1 PNG byte streams via `UploadedFile::fake()->createWithContent()`.
 3. **Automated Symbolic Linking & Accessor Routing**:
