@@ -17,3 +17,4 @@ All registration requests undergo strict validation via the `StudentController::
 | `year_level` | `required\|string\|max:50` | "Please select a year level." |
 | `address`    | `required\|string\|max:500` | "Complete residential address is required." |
 | `profile_picture` | `required\|image\|mimes:jpg,jpeg,png\|max:2048` | "A student profile picture is required." / "Must be JPG, JPEG, or PNG up to 2MB." |
+

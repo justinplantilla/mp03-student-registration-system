@@ -11,3 +11,4 @@ This folder contains screenshot captures of the Student Registration System.
 5. `05_student_profile_id_card.png` - Digital Student ID card and detailed record breakdown.
 6. `06_student_directory.png` - Registered students directory with enrollment statistics and filter controls.
 7. `07_mysql_workbench_schema.png` - MySQL Workbench schema and `students` table records.
+
