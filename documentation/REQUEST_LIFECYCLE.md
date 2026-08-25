@@ -56,3 +56,4 @@ sequenceDiagram
    - Eloquent generates a parameterized `INSERT` query into the `students` table.
 8. **HTTP Response & Blade Engine**:
    - Controller redirects to `students.show` with flash session data. The Blade engine renders the student's profile and digital ID badge.
+

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class StudentController extends Controller
 {
     /**
-     * Program list constant for consistency across the application.
+     * Program list constant for College of Information Technology.
      */
     public const PROGRAMS = [
         'Bachelor of Science in Information Technology (BSIT)',
@@ -165,4 +165,3 @@ class StudentController extends Controller
         ]);
     }
 }
-

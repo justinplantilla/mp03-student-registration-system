@@ -1,14 +1,14 @@
 # Database Entity Relationship Diagram (ERD)
 
-This document visualizes the database structure and relational entities within the `mp03_student_registration` database.
+This document visualizes the table schemas within the `mp03_student_registration` MySQL database. As per the system architecture, the tables operate as **independent, standalone entities without foreign key constraints/relations**.
 
-## Entity Relationship Diagram
+## Entity Relationship Diagram (Standalone Tables)
 
 ```mermaid
 erDiagram
     STUDENTS {
         bigint_unsigned id PK "Auto Increment"
-        varchar student_id UK "Unique Student ID Number"
+        varchar student_id UK "Unique Student ID"
         varchar first_name "Given First Name (max 100)"
         varchar middle_name "Optional Middle Name (max 100)"
         varchar last_name "Family Surname (max 100)"
@@ -27,7 +27,7 @@ erDiagram
     USERS {
         bigint_unsigned id PK "Auto Increment"
         varchar name "User Name"
-        varchar email UK "User Email"
+        varchar email UK "Unique User Email"
         timestamp email_verified_at "Verification Timestamp"
         varchar password "Hashed Password"
         varchar remember_token "Session Token"
@@ -35,24 +35,27 @@ erDiagram
         timestamp updated_at "Update Timestamp"
     }
 
-    SESSIONS {
-        varchar id PK "Session ID"
-        bigint_unsigned user_id FK "Nullable User ID"
-        varchar ip_address "Client IP Address"
-        text user_agent "Client Browser User Agent"
-        longtext payload "Encrypted Session Data"
-        integer last_activity "Last Activity Unix Timestamp"
+    CACHE {
+        varchar key PK "Cache Key"
+        mediumtext value "Serialized Cache Value"
+        integer expiration "Expiration Timestamp"
     }
 
-    USERS ||--o{ SESSIONS : "owns"
+    JOBS {
+        bigint_unsigned id PK "Auto Increment"
+        varchar queue "Queue Name"
+        longtext payload "Job Payload"
+        tinyint_unsigned attempts "Attempts Count"
+        unsigned_integer reserved_at "Reserved Timestamp"
+        unsigned_integer available_at "Available Timestamp"
+        unsigned_integer created_at "Created Timestamp"
+    }
 ```
 
 ---
 
-## Field Specifications & Keys
+## Architectural Note on Database Relations
 
-- **Primary Key (`PK`)**: `students.id` uniquely indexes each record.
-- **Unique Keys (`UK`)**:
-  - `students.student_id`: Prevents duplicate enrollment records.
-  - `students.email`: Enforces email uniqueness across all students.
-- **Storage Path**: `students.profile_picture` references the file saved under `storage/app/public/students/`.
+In this registration module:
+- The **`students`** table functions as a self-contained, standalone entity holding all required personal, academic, contact, and portrait path data.
+- No foreign key relationships or join constraints are enforced between `students` and other system tables (`users`, `cache`, `jobs`), ensuring maximum performance, modularity, and simplified data lifecycle management in MySQL Workbench.

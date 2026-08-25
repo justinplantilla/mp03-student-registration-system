@@ -36,3 +36,4 @@ flowchart TD
 4. **Validation Check**:
    - **Invalid Path**: If any field fails validation (e.g. invalid email format, duplicate student ID, missing fields, oversized image), Laravel redirects back to the form with red alert styling and descriptive error messages.
    - **Valid Path**: The image is saved to the public storage disk, a new row is created in the `students` table, and the user is redirected to their digital ID card preview.
+

@@ -28,7 +28,7 @@ class StudentRegistrationTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertSee('Student Online Registration');
-        $response->assertSee('Student ID Number');
+        $response->assertSee('College of Information Technology');
         $response->assertSee('First Name');
         $response->assertSee('Last Name');
         $response->assertSee('Email Address');
@@ -89,7 +89,7 @@ class StudentRegistrationTest extends TestCase
             'student_id' => 'CIT-2026-0001',
             'first_name' => 'Jane',
             'last_name' => 'Smith',
-            'email' => 'jane.smith@example.com',
+            'email' => 'jane.smith@cit.edu.ph',
             'mobile_number' => '09123456789',
             'gender' => 'Female',
             'date_of_birth' => '2004-05-15',
@@ -106,7 +106,7 @@ class StudentRegistrationTest extends TestCase
             'student_id' => 'CIT-2026-0001', // Duplicate ID
             'first_name' => 'John',
             'last_name' => 'Doe',
-            'email' => 'jane.smith@example.com', // Duplicate Email
+            'email' => 'jane.smith@cit.edu.ph', // Duplicate Email
             'mobile_number' => '09987654321',
             'gender' => 'Male',
             'date_of_birth' => '2003-08-20',
@@ -129,7 +129,7 @@ class StudentRegistrationTest extends TestCase
             'first_name' => 'Alex',
             'middle_name' => 'Morgan',
             'last_name' => 'Reyes',
-            'email' => 'alex.reyes@example.com',
+            'email' => 'alex.reyes@cit.edu.ph',
             'mobile_number' => '09171234567',
             'date_of_birth' => '2004-10-12',
             'gender' => 'Male',
@@ -147,7 +147,7 @@ class StudentRegistrationTest extends TestCase
             'first_name' => 'Alex',
             'middle_name' => 'Morgan',
             'last_name' => 'Reyes',
-            'email' => 'alex.reyes@example.com',
+            'email' => 'alex.reyes@cit.edu.ph',
             'mobile_number' => '09171234567',
             'gender' => 'Male',
             'program' => 'Bachelor of Science in Information Technology (BSIT)',
@@ -172,7 +172,7 @@ class StudentRegistrationTest extends TestCase
             'first_name' => 'Carlos',
             'middle_name' => 'D.',
             'last_name' => 'Mendoza',
-            'email' => 'carlos.mendoza@example.com',
+            'email' => 'carlos.mendoza@cit.edu.ph',
             'mobile_number' => '09223344556',
             'gender' => 'Male',
             'date_of_birth' => '2003-03-25',
@@ -187,7 +187,7 @@ class StudentRegistrationTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('CIT-2026-0003');
         $response->assertSee('Carlos D. Mendoza');
-        $response->assertSee('carlos.mendoza@example.com');
+        $response->assertSee('carlos.mendoza@cit.edu.ph');
         $response->assertSee('Bachelor of Science in Cybersecurity (BSCY)');
         $response->assertSee('3rd Year');
     }
@@ -198,7 +198,7 @@ class StudentRegistrationTest extends TestCase
             'student_id' => 'CIT-2026-0010',
             'first_name' => 'Samantha',
             'last_name' => 'Cruz',
-            'email' => 'samantha.cruz@example.com',
+            'email' => 'samantha.cruz@cit.edu.ph',
             'mobile_number' => '09331122334',
             'gender' => 'Female',
             'date_of_birth' => '2005-01-01',
@@ -224,4 +224,3 @@ class StudentRegistrationTest extends TestCase
         $emptyResponse->assertSee('No student records found');
     }
 }
-

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\File;
 class StudentSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeds for College of Information Technology.
      */
     public function run(): void
     {
@@ -90,4 +90,3 @@ class StudentSeeder extends Seeder
         }
     }
 }
-
