@@ -224,16 +224,17 @@ flowchart TD
 
 | Visual Component | Description | File Path |
 | :--- | :--- | :--- |
-| **Registration Form** | Black & Red themed registration form with organized section groupings | [`screenshots/01_registration_form.png`](screenshots/README.md) |
-| **Live Photo Preview** | Client-side 2x2 interactive portrait photo preview before submitting | [`screenshots/02_live_photo_preview.png`](screenshots/README.md) |
-| **Validation Errors** | In-line red border highlights, warning icons, and top summary banner | [`screenshots/03_validation_errors.png`](screenshots/README.md) |
-| **Flash Success Notification** | Dismissible green notification banner upon successful registration | [`screenshots/04_flash_success_notification.png`](screenshots/README.md) |
-| **Uploaded Profile Picture** | Portrait image stored under `storage/app/public/students/` | [`screenshots/05_uploaded_profile_picture.png`](screenshots/README.md) |
-| **MySQL Database Table** | MySQL Workbench displaying the `students` table structure & rows | [`screenshots/06_database_table_mysql.png`](screenshots/README.md) |
-| **Student Profile & ID Card** | Official digital student ID badge and detailed personal record view | [`screenshots/07_student_profile_id_card.png`](screenshots/README.md) |
-| **Student Directory** | Registry listing with search, degree program filters, and metrics | [`screenshots/08_student_directory.png`](screenshots/README.md) |
-| **VS Code Project Structure** | Codebase directory organization and file structure in IDE | [`screenshots/09_vscode_project_structure.png`](screenshots/README.md) |
-| **Automated PHPUnit Tests** | Terminal execution output showing 100% test pass rate | [`screenshots/10_terminal_phpunit_tests.png`](screenshots/README.md) |
+| **Registration Form** | Black & Red themed registration form with organized section groupings | [`Registration Form.png`](screenshots/Registration%20Form.png) |
+| **Live Photo Preview** | Client-side 2x2 interactive portrait photo preview before submitting | [`Upload Image.png`](screenshots/Upload%20Image.png) |
+| **Validation Errors** | In-line red border highlights, warning icons, and top summary banner | [`Validation Errors.png`](screenshots/Validation%20Errors.png) |
+| **Flash Success Notification** | Dismissible green notification banner upon successful registration | [`Successful Registration.png`](screenshots/Successful%20Registration.png) |
+| **Uploaded Profile Picture** | Portrait image stored under `storage/app/public/students/` | [`Upload Image.png`](screenshots/Upload%20Image.png) |
+| **MySQL Database Table** | MySQL Workbench displaying the `students` table structure & rows | [`Database Records.png`](screenshots/Database%20Records.png) |
+| **Student Profile & ID Card** | Official digital student ID badge and detailed personal record view | [`Student Profile.png`](screenshots/Student%20Profile.png) |
+| **Student Directory** | Registry listing with search, degree program filters, and metrics | [`Browser Output.png`](screenshots/Browser%20Output.png) |
+| **VS Code Project Structure** | Codebase directory organization and file structure in IDE | [`Laravel Project Structure.png`](screenshots/Laravel%20Project%20Structure.png) |
+| **Automated PHPUnit Tests** | Terminal execution output showing 100% test pass rate | [`Terminal Output.png`](screenshots/Terminal%20Output.png) |
+| **GitHub Repository** | GitHub repository page showing commits and project files | [`Github Repository.png`](screenshots/Github%20Repository.png) |
 
 ---
 
