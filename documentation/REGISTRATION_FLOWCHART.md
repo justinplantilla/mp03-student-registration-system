@@ -21,7 +21,7 @@ flowchart TD
     ValidateData -- Yes (Valid Data) --> SaveImage[Store Profile Photo to storage/app/public/students]
     SaveImage --> SaveDB[Insert Student Record into MySQL Database]
     SaveDB --> FlashSuccess[Set Session Flash: 'Student registered successfully!']
-    FlashSuccess --> RedirectShow[Redirect 302 to GET /students/{id}]
+    FlashSuccess --> RedirectShow[Redirect 302 to GET /students/:id]
     RedirectShow --> RenderIDCard[Render Digital Student ID Card & Profile Preview]
     RenderIDCard --> End([Registration Complete / Print Profile])
 ```
